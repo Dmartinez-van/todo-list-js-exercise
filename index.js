@@ -1,12 +1,14 @@
-// Arrays to keep track of each task's state
-const taskTitles = [];
-const taskComplete = [];
+/* eslint-disable func-style */
 
 // Create a new task by adding to the arrays
 // A new task will be created as incomplete
-function newTask(title) {
-  taskTitles.push(title);
-  taskComplete.push(false);
+function newTask(title, description) {
+  const task = {
+    title: title,
+    description: description,
+    complete: false
+  };
+  return task;
 }
 
 // Mark a task as complete by setting the task's status in the `taskComplete` array to `true`
